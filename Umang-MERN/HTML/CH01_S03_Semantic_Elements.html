@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH01_S03_Semantic_Elements - HTML5 Semantic Elements</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.5;
+        margin: 24px;
+        max-width: 980px;
+      }
+      code,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      pre {
+        background: #0b1020;
+        color: #e6edf3;
+        padding: 12px 14px;
+        border-radius: 10px;
+        overflow: auto;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 12px;
+      }
+      @media (min-width: 900px) {
+        .layout {
+          grid-template-columns: 2fr 1fr;
+        }
+      }
+      header,
+      nav,
+      main,
+      article,
+      section,
+      aside,
+      footer {
+        border: 1px solid #d0d7de;
+        border-radius: 12px;
+        padding: 12px;
+        background: #fff;
+      }
+      nav a {
+        margin-right: 10px;
+      }
+      footer {
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CH01_S03_Semantic_Elements</h1>
+    <p>
+      Semantic elements describe the <strong>meaning</strong> of content (instead
+      of using generic <code>&lt;div&gt;</code>/<code>&lt;span&gt;</code>
+      everywhere). This improves readability, accessibility, and SEO.
+    </p>
+
+    <h2>Common semantic elements</h2>
+    <ul>
+      <li><code>&lt;header&gt;</code>: intro content for a page/section</li>
+      <li><code>&lt;nav&gt;</code>: main navigation links</li>
+      <li><code>&lt;main&gt;</code>: primary page content (only one per page)</li>
+      <li><code>&lt;article&gt;</code>: self-contained content (blog post, news)</li>
+      <li><code>&lt;section&gt;</code>: thematic grouping of content</li>
+      <li><code>&lt;aside&gt;</code>: indirectly related content (sidebar, ads)</li>
+      <li><code>&lt;footer&gt;</code>: concluding content (copyright, links)</li>
+    </ul>
+
+    <h2>Live example (semantic layout)</h2>
+    <header>
+      <h2>My Website</h2>
+      <nav aria-label="Main navigation">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <main>
+        <article>
+          <h3>HTML5 Semantic Elements</h3>
+          <p>
+            Semantic elements make web pages more meaningful and accessible.
+          </p>
+
+          <section>
+            <h4>Frontend Technologies</h4>
+            <p>HTML, CSS, and JavaScript are core frontend technologies.</p>
+          </section>
+        </article>
+      </main>
+
+      <aside>
+        <h4>Related Posts</h4>
+        <ul>
+          <li>HTML Basics</li>
+          <li>CSS Fundamentals</li>
+          <li>JavaScript Essentials</li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer>
+      <p>(c) 2026 My Website</p>
+    </footer>
+
+    <h2>Same structure as code</h2>
+    <pre><code>&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;Blog&lt;/a&gt;
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;HTML5 Semantic Elements&lt;/h2&gt;
+    &lt;p&gt;...&lt;/p&gt;
+    &lt;section&gt;
+      &lt;h3&gt;Frontend Technologies&lt;/h3&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;aside&gt;...&lt;/aside&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+
+  </body>
+</html>

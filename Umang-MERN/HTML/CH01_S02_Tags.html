@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH01_S02_Tags - Common HTML Tags</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.5;
+        margin: 24px;
+        max-width: 960px;
+      }
+      code,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      pre {
+        background: #0b1020;
+        color: #e6edf3;
+        padding: 12px 14px;
+        border-radius: 10px;
+        overflow: auto;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      @media (min-width: 900px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .card {
+        border: 1px solid #d0d7de;
+        border-radius: 12px;
+        padding: 14px;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CH01_S02_Tags</h1>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Text + Headings</h2>
+        <h1>H1 Heading</h1>
+        <h2>H2 Heading</h2>
+        <h3>H3 Heading</h3>
+        <p>
+          This is a paragraph. You can make text <strong>bold</strong>,
+          <em>italic</em>, or <u>underlined</u>.
+        </p>
+        <pre><code>&lt;h1&gt;H1 Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph with &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>Links</h2>
+        <p>
+          Visit
+          <a href="https://developer.mozilla.org/" target="_blank" rel="noreferrer"
+            >MDN Web Docs</a
+          >
+        </p>
+        <pre><code>&lt;a href="https://developer.mozilla.org/" target="_blank" rel="noreferrer"&gt;
+  MDN Web Docs
+&lt;/a&gt;</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>Images</h2>
+        <p>
+          If the image file doesn't exist, you'll see a broken image icon. The
+          important attribute is <code>alt</code> for accessibility.
+        </p>
+        <img
+          src="https://via.placeholder.com/320x140.png?text=Sample+Image"
+          alt="Sample placeholder image"
+          width="320"
+          height="140"
+        />
+        <pre><code>&lt;img src="image.png" alt="Describe the image" /&gt;</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>Lists</h2>
+        <h3>Unordered</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <h3>Ordered</h3>
+        <ol>
+          <li>Install VS Code</li>
+          <li>Create an HTML file</li>
+          <li>Open in browser</li>
+        </ol>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Step 1&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>Containers: div + span</h2>
+        <div style="border: 1px dashed #8c959f; padding: 10px; border-radius: 10px">
+          This is a <code>div</code> (block container). Here is a
+          <span style="background: #ffeb3b; padding: 2px 6px; border-radius: 6px"
+            >span</span
+          >
+          (inline container).
+        </div>
+        <pre><code>&lt;div&gt;Block content &lt;span&gt;inline&lt;/span&gt;&lt;/div&gt;</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>Line breaks + Horizontal rule</h2>
+        <p>
+          Line 1<br />
+          Line 2<br />
+          Line 3
+        </p>
+        <hr />
+        <p>After the horizontal line.</p>
+        <pre><code>Line 1&lt;br /&gt;
+&lt;hr /&gt;</code></pre>
+      </section>
+    </div>
+
+    <h2>Attributes (quick idea)</h2>
+    <ul>
+      <li><strong>id</strong>: unique identifier for an element</li>
+      <li><strong>class</strong>: group elements for styling</li>
+      <li><strong>href/src</strong>: link and media source</li>
+      <li><strong>alt</strong>: image text alternative</li>
+      <li><strong>title</strong>: tooltip text</li>
+    </ul>
+
+  </body>
+</html>

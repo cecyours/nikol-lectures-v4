@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH01_S05_Multimedia_Audio_Video - HTML5 Multimedia</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.5;
+        margin: 24px;
+        max-width: 980px;
+      }
+      code,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      pre {
+        background: #0b1020;
+        color: #e6edf3;
+        padding: 12px 14px;
+        border-radius: 10px;
+        overflow: auto;
+      }
+      .card {
+        border: 1px solid #d0d7de;
+        border-radius: 12px;
+        padding: 14px;
+        background: #fff;
+        margin: 14px 0;
+      }
+      video,
+      audio {
+        width: 100%;
+        max-width: 720px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CH01_S05_Multimedia_Audio_Video</h1>
+    <p>
+      HTML5 supports native multimedia using <code>&lt;audio&gt;</code> and
+      <code>&lt;video&gt;</code> without external plugins.
+    </p>
+
+    <section class="card">
+      <h2>Audio</h2>
+      <p>
+        If you don’t have an audio file locally, this example will show the
+        fallback text.
+      </p>
+      <audio controls>
+        <source src="music.mp3" type="audio/mpeg" />
+        <source src="music.ogg" type="audio/ogg" />
+        Your browser does not support the audio element.
+      </audio>
+      <pre><code>&lt;audio controls&gt;
+  &lt;source src="song.mp3" type="audio/mpeg" /&gt;
+  &lt;source src="song.ogg" type="audio/ogg" /&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>Video</h2>
+      <p>
+        Add a local <code>video.mp4</code> file next to this HTML file to test
+        playback.
+      </p>
+      <video controls width="600" poster="poster.jpg">
+        <source src="video.mp4" type="video/mp4" />
+        <source src="video.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+      <pre><code>&lt;video controls width="600" poster="thumbnail.jpg"&gt;
+  &lt;source src="movie.mp4" type="video/mp4" /&gt;
+  &lt;source src="movie.webm" type="video/webm" /&gt;
+&lt;/video&gt;</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>Subtitles with &lt;track&gt; (example)</h2>
+      <video controls>
+        <source src="lesson.mp4" type="video/mp4" />
+        <track
+          src="subtitles.vtt"
+          kind="subtitles"
+          srclang="en"
+          label="English"
+        />
+      </video>
+      <pre><code>&lt;video controls&gt;
+  &lt;source src="lesson.mp4" type="video/mp4" /&gt;
+  &lt;track src="subtitles.vtt" kind="subtitles" srclang="en" label="English" /&gt;
+&lt;/video&gt;</code></pre>
+    </section>
+
+    <h2>Quick accessibility checklist</h2>
+    <ul>
+      <li>Use <strong>controls</strong> so users can play/pause.</li>
+      <li>Add <strong>captions/subtitles</strong> for videos when possible.</li>
+      <li>Provide <strong>fallback text</strong> inside the tags.</li>
+      <li>Avoid autoplay with sound (poor UX).</li>
+    </ul>
+  </body>
+</html>

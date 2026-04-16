@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH01_S04_Forms_And_Validation - HTML Forms</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.5;
+        margin: 24px;
+        max-width: 980px;
+      }
+      code,
+      pre {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      pre {
+        background: #0b1020;
+        color: #e6edf3;
+        padding: 12px 14px;
+        border-radius: 10px;
+        overflow: auto;
+      }
+      form {
+        border: 1px solid #d0d7de;
+        border-radius: 12px;
+        padding: 14px;
+        background: #fff;
+        max-width: 520px;
+      }
+      label {
+        display: inline-block;
+        margin-top: 10px;
+        font-weight: 600;
+      }
+      input,
+      select,
+      textarea,
+      button {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 12px;
+        margin-top: 6px;
+        border-radius: 10px;
+        border: 1px solid #d0d7de;
+      }
+      button {
+        margin-top: 14px;
+        background: #111827;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      .hint {
+        color: #57606a;
+        font-size: 0.95rem;
+        margin-top: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CH01_S04_Forms_And_Validation</h1>
+    <p>
+      HTML forms collect user input and submit data. HTML5 provides helpful
+      built-in validation using attributes like <code>required</code>,
+      <code>min</code>/<code>max</code>, <code>minlength</code>, and
+      <code>pattern</code>.
+    </p>
+
+    <h2>Live form (try submitting)</h2>
+    <form action="#" method="post">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required />
+      <div class="hint">Required field.</div>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+      <div class="hint">Must be a valid email format.</div>
+
+      <label for="password">Password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        minlength="6"
+        maxlength="12"
+        required
+      />
+      <div class="hint">6–12 characters.</div>
+
+      <label for="age">Age</label>
+      <input id="age" name="age" type="number" min="18" max="60" required />
+      <div class="hint">Allowed range: 18–60.</div>
+
+      <label for="username">Username</label>
+      <input
+        id="username"
+        name="username"
+        type="text"
+        pattern="[A-Za-z]{5,}"
+        required
+      />
+      <div class="hint">Only letters, minimum 5 characters.</div>
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <h2>Code (same idea)</h2>
+    <pre><code>&lt;form action="register.php" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input id="name" name="name" required /&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required /&gt;
+
+  &lt;label for="password"&gt;Password:&lt;/label&gt;
+  &lt;input type="password" id="password" name="password"
+         minlength="6" maxlength="12" required /&gt;
+
+  &lt;label for="age"&gt;Age:&lt;/label&gt;
+  &lt;input type="number" id="age" name="age" min="18" max="60" required /&gt;
+
+  &lt;input type="submit" value="Register" /&gt;
+&lt;/form&gt;</code></pre>
+
+    <h2>Important note</h2>
+    <p>
+      HTML5 validation is client-side only and can be bypassed. In a MERN app,
+      you must also validate on the server (Node/Express) and database.
+    </p>
+
+  </body>
+</html>
