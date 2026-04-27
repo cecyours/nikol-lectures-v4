@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <h1>Array Methods</h1>
+    <p id="data"></p>
+</body>
+
+<script>
+    const data = document.getElementById('data')
+    
+    const fruits = ["kiwi", 'Apple', "kiwi", "Banana", "kiwi"]
+
+    data.innerHTML += `<h1>Orignel Array<h1>`
+
+    data.innerHTML += fruits
+
+    data.innerHTML += `<h1>Push<h1>`
+
+    fruits.push("mango")
+
+    data.innerHTML += fruits
+</script>
+
+</html>

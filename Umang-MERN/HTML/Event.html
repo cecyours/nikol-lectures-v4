@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+
+<script>
+
+    var loaded = false;
+
+
+    function doit() {
+        alert('Everything is "loaded" and loaded = ' + loaded);
+    }
+
+</script>
+
+
+<body onLoad="window.loaded = true;">
+
+    <INPUT TYPE="button" NAME="click1" VALUE="Click me for fun!"
+        onClick=" window.location.href = 'https://www.google.com'">
+
+
+
+        <input type="text" onFocus="alert('see ! You leave me ')"> 
+
+
+
+    <button onClick="if (window.loaded == true) doit();">
+        helllo
+    </button>
+
+</body>
+
+</html>
