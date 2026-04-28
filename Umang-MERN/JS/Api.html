@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="search" oninput="filterProducts()" placeholder="Search">
+
+    <label>
+        <input type="checkbox" id="inStock" onchange="filterProducts()">
+        In Stock Only
+    </label>
+
+    <div id="results"></div>
+
+    <script>
+        let allProducts = [];
+
+        // Load once from DummyJSON
+        async function loadProducts() {
+            const res = await fetch("https://dummyjson.com/products");
+            const data = await res.json();
+
+            allProducts = data.products;
+            filterProducts(); // initial display
+        }
+
+        // Single filter function
+        function filterProducts() {
+
+            let searchText = document
+                .getElementById("search")
+                .value
+                .toLowerCase();
+
+            let inStockOnly = document
+                .getElementById("inStock")
+                .checked;
+
+            let filtered = allProducts.filter(product => {
+
+                // text search lowercase both
+                let matchesSearch =
+                    product.title.toLowerCase().includes(searchText);
+
+                // checkbox logic
+                let matchesStock =
+                    !inStockOnly || product.stock > 0;
+
+                return matchesSearch && matchesStock;
+            });
+
+            document.getElementById("results").innerHTML =
+                filtered.map(p =>
+                    `<p>${p.title} - Stock: ${p.stock}</p>`
+                ).join("");
+        }
+
+        loadProducts();
+    </script>
+</body>
+
+</html>
