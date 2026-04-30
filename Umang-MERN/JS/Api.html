@@ -24,7 +24,7 @@
         async function loadProducts() {
             const res = await fetch("https://dummyjson.com/products");
             const data = await res.json();
-
+ 
             allProducts = data.products;
             filterProducts(); // initial display
         }
