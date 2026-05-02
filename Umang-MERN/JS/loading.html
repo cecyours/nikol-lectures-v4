@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loader Example</title>
+    <style>
+        #loader {
+            display: none;
+            font-size: 20px;
+            color: blue;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #data {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Promise.any Loader Demo</h2>
+
+    <button onclick="getData()">Fetch Data</button>
+
+    <p id="loader">⏳ Loading...</p>
+    <p id="data"></p>
+    <p id="error"></p>
+
+    <script>
+        async function getData() {
+            const loader = document.getElementById("loader");
+            const dataEl = document.getElementById("data");
+            const errorEl = document.getElementById("error");
+
+            // reset
+            dataEl.innerText = "";
+            errorEl.innerText = "";
+
+            loader.style.display = "block";
+
+            // random success/fail
+            const p1 = new Promise((res, rej) => setTimeout(() => rej("Fail 1"), 1000));
+            const p2 = new Promise((res, rej) => setTimeout(() => {
+                Math.random() > 0.5 ? res("Success Data 🎉") : rej("Fail 2");
+            }, 1500));
+            const p3 = new Promise((res, rej) => setTimeout(() => rej("Fail 3"), 2000));
+
+            try {
+                const result = await Promise.any([p1, p2, p3]);
+                dataEl.innerText = result;
+            } catch (err) {
+                errorEl.innerText = err.message
+                throw new Error("User is required");
+            } finally {
+                loader.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
