@@ -3,7 +3,7 @@
 int main()
 {
 
-    int number = 3;
+    int number = 3;  // integer
     char grade = 'A';
     float height = 4.44f;
     double pi = 3.14159;
