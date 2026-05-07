@@ -1,0 +1,84 @@
+.box {
+    position: static;
+    /* box-sizing: border-box; */
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 15px;
+    background-color: lightblue;
+}
+
+
+.relative-box {
+    position: relative;
+    top: 10px;
+    left: 30px;
+    background-color: lightgreen;
+    width: 150px;
+    height: 150px;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    background-color: coral;
+    width: 150px;
+    height: 100px;
+}
+
+
+.relate-box {
+    position: relative;
+    top: 10px;
+    left: 30px;
+    background-color: lightgreen;
+    width: 150px;
+    height: 150px;
+}
+
+.relate-box::after {
+    content: "Parent";
+}
+
+
+.abso-box {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    background-color: coral;
+    width: 150px;
+    height: 100px;
+}
+
+.abso-box::after {
+    content: "Child";
+}
+
+.fixed-box {
+    position: fixed;
+    top: 400px;
+    overflow: auto;
+    left: 200px;
+    background-color: peru;
+    width: 150px;
+    height: 100px;
+}
+
+
+.stick-parent {
+    position: relative;
+    background-color: rgb(225, 188, 200);
+    width: 500px;
+    height: 1500px;
+}
+
+
+.sticky-box {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background-color: coral;
+    width: 150px;
+    height: 100px;
+}
