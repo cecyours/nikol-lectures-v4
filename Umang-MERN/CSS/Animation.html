@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+
+
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: #f39c12;
+        transition: transform 0.5s, background-color 0.5s;
+    }  
+
+    .box:hover {
+        transform: scale(1.2);   
+        background-color: #e74c3c;
+    }
+
+
+
+    @keyframes moveAndColor {
+        0% {
+            background-color: #3498db;
+            transform: translateX(0);
+        }
+
+        10% {
+            background-color: #9b59b6;
+            transform: translateX(100px);
+        }
+
+        100% {
+            background-color: #3498db;
+            transform: translateX(0);
+        }
+
+
+
+    }
+
+    .animated-box {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        animation: moveAndColor 5s infinite;
+
+    }
+</style>
+
+<body>
+
+    <div class="box"></div>
+
+
+    <div class="animated-box"></div>
+
+
+</body>
+
+</html>
