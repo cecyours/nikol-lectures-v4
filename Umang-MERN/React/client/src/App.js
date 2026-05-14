@@ -5,6 +5,7 @@ import Welcome from './components/Welcome';
 import User from './components/User';
 import Counter from './components/Counter';
 import Dice from './components/Dice';
+import TypingCounter from './components/TypingCounter';
 
 function App() {
   const name = "Mary";
@@ -15,23 +16,23 @@ function App() {
       <Header />
       {/* <h1>Welcome to React!  <Welcome name="Umang" /></h1> */}
 
-      <Dice />
+      {/* <Dice /> */}
 
 
-      <h2>Users (Props Example)</h2>
+      {/* <h2>Users (Props Example)</h2>
       <User name={"Umang"} age={"22"} />
 
       <User name={"Vishal"} age={"24"} />
 
-      <User name={"Gopal"} age={"25"} />
+      <User name={"Gopal"} age={"25"} /> */}
 
 
-      <h2>Counter (State Example)</h2>
+      {/* <h2>Counter (State Example)</h2> */}
 
-      <Counter />
+      {/* <Counter /> */}
 
 
-
+      <TypingCounter />
 
       <p>Hello, {name}! Today is {currentDate}.</p>
       <button onClick={() => alert("You clicked the button!")}>
