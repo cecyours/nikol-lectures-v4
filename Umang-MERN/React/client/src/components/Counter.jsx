@@ -1,10 +1,33 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Counter = () => {
 
   // Declare state variable 'count' with initial value 0
 
   const [count, setCount] = useState(0)   // 0 is default/initial value of count
+
+
+  useEffect(() => {
+    console.log("Component Mount");
+  }, [])
+
+
+
+  useEffect(() => {
+    console.log("Component Updating");
+
+    // dependency
+  }, [count])
+
+
+
+  useEffect(() => {
+    return () => {
+      console.log("Component Unmounted");
+    };
+  }, []);
+
+
 
   return (
     <div
