@@ -1,10 +1,7 @@
-    // This is simple hello world program 
+#include <stdio.h>
 
-    #include <stdio.h>
+int main()
+{
 
-    int main()
-    {
-        printf("Hello World . This is Trith First lecture");
-
-        return 0;
-    }
+    return 0;
+}

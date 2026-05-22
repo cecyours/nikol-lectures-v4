@@ -17,6 +17,4 @@ void main()
     printf("Hello World\n");
     printf("sum of %d,%d is %d\n", A, i, SUM(A, i));
     display();
-
-    
 }
