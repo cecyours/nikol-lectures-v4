@@ -1,4 +1,2 @@
-# print("Hello world")
-print("Name : Vishal ")
-print("Age : 34 ")
-
+for i in range(1,11):
+    print(i)
