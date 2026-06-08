@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const data = [
+var data = [
   {
     "id": 1,
     "name": "Aarav Sharma",
@@ -128,6 +128,92 @@ const data = [
 router.get('/', function (req, res, next) {
   res.json(data)
 });
+
+
+router.get('/:id', function (req, res, next) {
+
+
+  try {
+    const { id } = req.params
+
+    const fetchData = data.filter(item => item.id === Number(id))
+
+
+    res.jso
+  } catch (error) {
+    console.log(error);
+
+
+  }
+});
+
+
+router.post('/', function (req, res) {
+  try {
+    const user = req.body
+    console.log(user);
+    data.push(user)
+    res.json(data)
+  } catch (error) {
+    console.log(error);
+  }
+})
+
+
+router.delete('/:id', function (req, res) {
+  try {
+
+    const { id } = req.params
+
+    data = data.filter(item => item.id !== Number(id));
+
+    res.json(data)
+  } catch (error) {
+    console.log(error);
+  }
+})
+
+
+router.put('/:id', (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const updatedData = req.body;
+
+    const index = data.findIndex(item => item.id === Number(id));
+
+    if (index === -1) {
+      return res.status(404).json({
+        message: 'Item not found'
+      });
+    }
+
+    data[index] = {
+      ...data[index],
+      ...3
+    };
+
+    res.json({
+      message: 'Updated successfully',
+      data: data
+    });
+
+
+
+
+
+
+
+
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: 'Server error'
+    });
+  }
+});
+
+
 
 
 
