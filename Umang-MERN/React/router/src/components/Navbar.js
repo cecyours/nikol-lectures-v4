@@ -21,6 +21,10 @@ const Navbar = () => {
                     margin: "0 15px", color: "white",
                     textDecoration: "none"
                 }}>Contact</Link>
+                 <Link to="/users" style={{
+                    margin: "0 15px", color: "white",
+                    textDecoration: "none"
+                }}>Users</Link>
             </nav>
         </div>
     )
