@@ -1,3 +1,7 @@
-print("--------------")
+num1  = int(input("Enter the first Number : "))
+num2  = int(input("Enter the second Number : "))
 
-print("--------------")
+
+total = num1 + num2
+
+print("The total is both number is "  , total)
