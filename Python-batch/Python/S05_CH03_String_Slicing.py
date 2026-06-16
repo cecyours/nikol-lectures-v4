@@ -8,9 +8,16 @@
 head = "Lester Dom tim"
 title = "Python Program"
 pera = "Last OF US"
-print(title[7:])
-print(head[4:13])
-print(pera[0:9:3])
+# print(title[7:])
+# print(head[4:13])
+# print(pera[0:9:3])
+
+text = "PythonProgramming"
+print(text[::-1])
+
+
+
+
 
 
 
