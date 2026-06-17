@@ -1,0 +1,5 @@
+print("Hi my name is Aarav Shah")
+print("I live in Kampala,Uganda")
+print("Right now I have come to India for my vacation, which is two months long")
+print("I love India ")
+print("My most favourite dish is pizza")
