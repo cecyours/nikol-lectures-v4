@@ -8,15 +8,24 @@
 // Global Variable
 int a = 100;
 
-// Main section
-int main()
-{
-    printf("Hello world");
-}
-
-// user define functionssection
 int greet()
 {
     int b = 10;
     printf("%d", a);
+
+    // >
+    // <
+
+    if (b > 45) // true
+    {
+        printf("B is grater then 40");
+    }
 }
+// Main section
+int main()
+{
+    printf("Hello world\n");
+    greet();
+}
+
+// user define functionssection
