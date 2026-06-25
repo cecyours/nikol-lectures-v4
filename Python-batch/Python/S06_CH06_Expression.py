@@ -4,4 +4,6 @@ c = 2
 
 result = (a + b) * c / b - 1
 
-print(result)
+# 15 -> 6 -1 
+
+print(int(result))
