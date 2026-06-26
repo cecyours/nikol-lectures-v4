@@ -30,6 +30,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+function auth(req, res, next) {
+
+  const { isLoggedIn } = req.query;
+
+
+  if (isLoggedIn === "true") {
+    next();
+  } else {
+    res.send("Access Denied");
+  }
+}
+
+app.get('/profile', auth, (req, res) => {
+  res.send("Welcome to Profile");
+});
 
 
 app.use('/', indexRouter);
@@ -54,4 +69,3 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
-  
