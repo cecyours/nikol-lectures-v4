@@ -4,7 +4,7 @@ const url = "mongodb+srv://umang:asdasd@cluster0.napmomp.mongodb.net/?appName=Cl
 const client = new MongoClient(url);
 async function insertUser() {
     await client.connect();
-    const db = client.db("test");
+    const db = client.db("test");b 
     // const users = db.collection("users");
 
     const users = await db.collection("users").find({ age: 25 }).toArray();
