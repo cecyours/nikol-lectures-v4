@@ -3,6 +3,7 @@
 int main()
 {
     FILE *fp;
+    int a = 10, b = 20;
 
     fp = fopen("Z_message.txt", "w");
 
@@ -13,8 +14,16 @@ int main()
     }
     printf("File opened successfully\n");
 
-    fputs("Welcome To C program\n", fp);
-    fputs("File handling example", fp);
+    fprintf(fp, "%d + %d = %d\n", a, b, a + b);
+
+    for (int i = 0; i < 10; i++)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            fputs("* ", fp);
+        }
+        fputs("\n", fp);
+    }
 
     fclose(fp);
 }
