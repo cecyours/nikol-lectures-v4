@@ -4,5 +4,5 @@ def square(n):
 n = int(input("Enter The number : "))
 
 res = square(n)
-
+    
 print("The result is" , res)
