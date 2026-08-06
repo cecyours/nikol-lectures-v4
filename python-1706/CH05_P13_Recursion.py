@@ -1,4 +1,7 @@
-def factorial():
-
-
-# 5 = 5 X 4 X 3 X 2 X 1 =
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+result = factorial(5)
+print("Factorial =", result)
