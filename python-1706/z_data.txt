@@ -1,0 +1,3 @@
+aarav:12:python
+vishal:24:react
+diya:20:sql
