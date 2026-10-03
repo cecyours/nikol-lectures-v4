@@ -8,12 +8,15 @@ import UserLayout from './Layouts/UserLayout'
 import ProtectedRoute from './routes/ProtectedRoute'
 import TestProtected from './components/TestProtected'
 import AdminRoute from './routes/AdminRoute'
+import Chat from './components/Chat'
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<UserLayout />}>
+          <Route path='/' element={<Chat />} />
+
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
         </Route>
