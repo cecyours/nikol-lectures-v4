@@ -13,7 +13,7 @@ print("age : " , student['age'])
 
 student['name'] = "vishal"
 
-student.pop('Course')
+student.pop('Course')   
 print(student)
 
 
