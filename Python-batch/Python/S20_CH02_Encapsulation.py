@@ -1,4 +1,7 @@
 class Account:
+
+    # Balance is a data 
+    # Deposite , withdrawl and show_Balance methods
     def __init__(self , balance):
         self.balance = balance
     def deposite(self , amount):

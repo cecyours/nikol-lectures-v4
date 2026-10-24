@@ -8,6 +8,8 @@ class Crow(Bird):
     def sound(self):
         print("Crow caws")
 
+# here sound method name is same in all 
+
 s = Sparrow()
 
 c = Crow()
